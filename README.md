@@ -293,7 +293,7 @@ This separation follows **industry best practices**.
 
 ## 👨‍💻 Author
 
-**Praful Jain**  
+**Prafful Jain**  
 Backend Developer | Java | Spring Boot | Microservices  
 
 This project is part of continuous backend engineering learning and interview preparation.
