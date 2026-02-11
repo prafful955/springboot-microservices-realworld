@@ -14,7 +14,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.praful</groupId>
+    <groupId>com.example</groupId>
     <artifactId>api-gateway</artifactId>
     <version>0.0.1</version>
     <name>api-gateway</name>
@@ -55,6 +55,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <!-- ✅ TEST -->
