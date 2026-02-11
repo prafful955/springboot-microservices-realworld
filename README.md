@@ -15,8 +15,8 @@ To design and implement a **production-style microservices backend** using Sprin
 - Centralized configuration
 - API Gateway
 - Inter-service communication
-- Observability (metrics & monitoring)
-- Logging, resilience, messaging, and security (planned)
+- Observability (metrics, monitoring & logging)
+- Resilience, messaging, and security (planned)
 
 This project is intentionally built **incrementally**, similar to how real systems evolve in companies.
 
@@ -65,6 +65,9 @@ This architecture follows **real-world microservice design patterns**.
 
 ## 🔍 Observability (Implemented)
 
+Observability is implemented using **metrics and structured logging**, following real-world practices.
+
+### Metrics & Monitoring
 - Spring Boot Actuator enabled
 - Prometheus scrapes application metrics
 - Grafana dashboards for:
@@ -75,6 +78,20 @@ This architecture follows **real-world microservice design patterns**.
   - Error rate monitoring (4xx vs 5xx)
 
 > Micrometer HTTP histograms are explicitly enabled for accurate latency percentiles.
+
+### Logging & Traceability
+- File-based logging using **SLF4J + Logback**
+- Request & response logging for all services
+- Error and exception logging
+- **Correlation ID generated at API Gateway**
+- Correlation ID propagated across:
+  - API Gateway
+  - Employee Service
+  - Department Service
+- Enables end-to-end request tracing across microservices
+
+> Monitoring tells *what* is wrong, logs explain *why* it happened.
+
 
 ---
 
@@ -126,15 +143,17 @@ This separation follows **industry best practices**.
 - Inter-service communication using Feign Client
 - Client-side load balancing
 - Observability with Prometheus & Grafana
+- Structured logging with SLF4J & Logback
+- End-to-end request tracing using Correlation ID
 - Clean Git repository structure
 
 ---
-
 ## 🚧 Work in Progress
 
-- Centralized logging
-- Request and error logging
-- Correlation ID for request tracing
+- Resilience patterns (Retry, Circuit Breaker, Timeouts)
+- Event-driven communication using Kafka
+- Advanced business logic (validation, pagination)
+
 
 ---
 
@@ -142,14 +161,19 @@ This separation follows **industry best practices**.
 
 - Resilience patterns (Retry, Circuit Breaker, Timeouts)
 - Event-driven communication using Kafka
-- Pagination and validation
+- Business logic enhancements (validation, pagination, soft delete)
 - Performance optimization and caching
 - Security using Spring Security and JWT
-- Docker and Kubernetes concepts
+- Docker & Kubernetes concepts
 - CI/CD pipeline explanation
 
----
 
+---
+## 🧠 Interview Focus
+
+This project emphasizes **observability, failure handling, and real-world backend design** over feature count, mirroring how production systems are built and evolved incrementally.
+
+---
 ## 👨‍💻 Author
 
 **Prafful Jain**  
