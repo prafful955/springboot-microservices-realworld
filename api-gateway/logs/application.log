@@ -906,3 +906,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2026-02-13 14:44:33.696 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f636472c-f435-4e52-834f-d7074b4f9dcd]
 2026-02-13 14:44:56.267 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 2026-02-13 14:49:56.222 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:54:56.194 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
