@@ -1,49 +1,908 @@
-2026-02-12 00:14:57.724 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2026-02-12 00:14:57.927 [main] INFO  c.e.apigateway.ApiGatewayApplication - Starting ApiGatewayApplication using Java 17.0.17 with PID 3900 (C:\Users\prafu\IdeaProjects\api-gateway\target\classes started by prafu in C:\Users\prafu\IdeaProjects\api-gateway)
-2026-02-12 00:14:57.930 [main] INFO  c.e.apigateway.ApiGatewayApplication - No active profile set, falling back to 1 default profile: "default"
-2026-02-12 00:14:58.048 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2026-02-12 00:14:58.049 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=api-gateway, profiles=[default], label=null, version=fecd99e5da7497afb7a1d8ce9ecf8ca5b4abab12, state=
-2026-02-12 00:15:07.412 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=db89eeed-a15e-3f9a-913a-05d057b07ac5
-2026-02-12 00:15:08.506 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-02-12 00:15:08.511 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-02-12 00:15:08.514 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-02-12 00:15:08.517 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-02-12 00:15:08.530 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-02-12 00:15:18.246 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
-2026-02-12 00:15:18.247 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
-2026-02-12 00:15:18.247 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
-2026-02-12 00:15:18.248 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
-2026-02-12 00:15:18.248 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
-2026-02-12 00:15:18.248 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
-2026-02-12 00:15:18.248 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
-2026-02-12 00:15:18.248 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
-2026-02-12 00:15:18.249 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
-2026-02-12 00:15:18.249 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
-2026-02-12 00:15:18.249 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
-2026-02-12 00:15:18.249 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2026-02-12 00:15:18.249 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
-2026-02-12 00:15:18.250 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2026-02-12 00:15:19.855 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
-2026-02-12 00:15:21.850 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
-2026-02-12 00:15:22.092 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-02-12 00:15:22.771 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
-2026-02-12 00:15:22.885 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
-2026-02-12 00:15:22.900 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
-2026-02-12 00:15:22.971 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
-2026-02-12 00:15:22.972 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
-2026-02-12 00:15:22.972 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
-2026-02-12 00:15:22.973 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
-2026-02-12 00:15:22.976 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
-2026-02-12 00:15:22.977 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
-2026-02-12 00:15:22.977 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
-2026-02-12 00:15:24.224 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
-2026-02-12 00:15:24.238 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-2026-02-12 00:15:24.248 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-02-12 00:15:24.297 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1770835524296 with initial instances count: 0
-2026-02-12 00:15:24.302 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application API-GATEWAY with eureka with status UP
-2026-02-12 00:15:24.304 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1770835524304, current=UP, previous=STARTING]
-2026-02-12 00:15:24.310 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080: registering service...
-2026-02-12 00:15:24.726 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - registration status: 204
-2026-02-12 00:15:25.061 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
-2026-02-12 00:15:25.070 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
-2026-02-12 00:15:29.645 [main] INFO  c.e.apigateway.ApiGatewayApplication - Started ApiGatewayApplication in 44.248 seconds (process running for 47.171)
+2026-02-13 01:29:59.710 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-13 01:29:59.955 [main] INFO  c.e.apigateway.ApiGatewayApplication - Starting ApiGatewayApplication using Java 17.0.17 with PID 9508 (C:\Users\prafu\IdeaProjects\api-gateway\target\classes started by prafu in C:\Users\prafu\IdeaProjects\api-gateway)
+2026-02-13 01:29:59.958 [main] INFO  c.e.apigateway.ApiGatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 01:30:00.088 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-02-13 01:30:00.089 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=api-gateway, profiles=[default], label=null, version=754395625f1bf0fd65abd32103c5399f21632667, state=
+2026-02-13 01:30:03.814 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=db89eeed-a15e-3f9a-913a-05d057b07ac5
+2026-02-13 01:30:06.255 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-02-13 01:30:06.266 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-02-13 01:30:06.280 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-02-13 01:30:06.285 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-02-13 01:30:06.327 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-02-13 01:30:19.734 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2026-02-13 01:30:19.734 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2026-02-13 01:30:19.735 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2026-02-13 01:30:19.735 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2026-02-13 01:30:19.735 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2026-02-13 01:30:19.735 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2026-02-13 01:30:19.735 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2026-02-13 01:30:19.735 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2026-02-13 01:30:19.736 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2026-02-13 01:30:19.736 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2026-02-13 01:30:19.736 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2026-02-13 01:30:19.736 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-02-13 01:30:19.737 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2026-02-13 01:30:19.737 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-02-13 01:30:20.657 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2026-02-13 01:30:21.251 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-02-13 01:30:21.288 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-13 01:30:21.415 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-02-13 01:30:21.496 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-02-13 01:30:21.507 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 01:30:21.550 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-02-13 01:30:21.550 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-02-13 01:30:21.552 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-02-13 01:30:21.552 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-02-13 01:30:21.552 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-02-13 01:30:21.552 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-02-13 01:30:21.553 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-02-13 01:30:22.087 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-02-13 01:30:22.092 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-02-13 01:30:22.097 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-02-13 01:30:22.106 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1770926422106 with initial instances count: 0
+2026-02-13 01:30:22.109 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application API-GATEWAY with eureka with status UP
+2026-02-13 01:30:22.110 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1770926422110, current=UP, previous=STARTING]
+2026-02-13 01:30:22.113 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080: registering service...
+2026-02-13 01:30:22.192 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - registration status: 204
+2026-02-13 01:30:22.589 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2026-02-13 01:30:22.593 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2026-02-13 01:30:23.086 [main] INFO  c.e.apigateway.ApiGatewayApplication - Started ApiGatewayApplication in 27.666 seconds (process running for 31.514)
+2026-02-13 01:30:52.096 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-02-13 01:30:52.096 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-02-13 01:30:52.097 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-02-13 01:30:52.097 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-02-13 01:30:52.097 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-02-13 01:30:52.097 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-02-13 01:30:52.097 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-02-13 01:30:52.125 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-02-13 01:35:21.571 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 01:35:31.452 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-0b23b2a7-0e8b-4315-823f-ed83ba34f40d]
+2026-02-13 01:35:34.230 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=500 time=2778ms [cid=API-GATEWAY-0b23b2a7-0e8b-4315-823f-ed83ba34f40d]
+2026-02-13 01:35:40.933 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f11f278b-aafe-425d-b7a2-6dccde22469b]
+2026-02-13 01:35:43.006 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=500 time=2073ms [cid=API-GATEWAY-f11f278b-aafe-425d-b7a2-6dccde22469b]
+2026-02-13 01:36:29.462 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-093d9a66-914e-4545-b614-833021d5ad33]
+2026-02-13 01:36:31.528 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=500 time=2068ms [cid=API-GATEWAY-093d9a66-914e-4545-b614-833021d5ad33]
+2026-02-13 01:40:21.578 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 01:45:21.589 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 01:49:31.772 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e0d43b66-a2c1-4f7c-a184-a604ed9d0390]
+2026-02-13 01:49:33.832 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=500 time=2061ms [cid=API-GATEWAY-e0d43b66-a2c1-4f7c-a184-a604ed9d0390]
+2026-02-13 01:50:21.598 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 01:55:21.610 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:00:21.624 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:05:21.639 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:10:21.648 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:10:44.371 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-7a319d0c-a378-4317-8f17-c5fccd55dbc7]
+2026-02-13 02:10:45.586 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ca04baba-d0e0-425a-b389-d0854fd55cd8]
+2026-02-13 02:10:48.002 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d19729d9-9f38-4b28-987c-b9ef70401590]
+2026-02-13 02:10:51.492 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6320ad9c-5ab6-40d6-b86a-46f4dd756e10]
+2026-02-13 02:11:02.691 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-639aca1e-61a7-4e76-ad49-8c0eec04444f]
+2026-02-13 02:11:04.772 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2081ms [cid=API-GATEWAY-639aca1e-61a7-4e76-ad49-8c0eec04444f]
+2026-02-13 02:11:11.458 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-41b8b8a9-b42e-41b3-8ceb-b51355a734c7]
+2026-02-13 02:11:13.491 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2033ms [cid=API-GATEWAY-41b8b8a9-b42e-41b3-8ceb-b51355a734c7]
+2026-02-13 02:15:21.663 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:16:56.169 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-4f3b4d48-733c-4f7d-b342-e1d9a303c222]
+2026-02-13 02:16:56.172 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:16:58.895 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-027d4b25-a7b8-4d2c-b292-5daacdd45b38]
+2026-02-13 02:16:58.897 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:00.842 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e5a6f39f-78da-47fe-b381-7860186cf33b]
+2026-02-13 02:17:00.843 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:01.831 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-840ac509-0b00-46cf-88f5-9ba425ab6da5]
+2026-02-13 02:17:01.833 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:02.928 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-48c6c615-83e4-4ce8-bde7-f867f4e46957]
+2026-02-13 02:17:02.930 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:04.952 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-1ea97a99-3ad9-44ed-999b-9f87bd3e4d11]
+2026-02-13 02:17:04.954 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:06.532 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b6280856-84af-4fac-9d53-ad14ddc6a9ab]
+2026-02-13 02:17:06.534 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:08.216 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-a83d739e-78ee-47fe-845e-8252b6220b09]
+2026-02-13 02:17:08.218 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:09.299 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-7e167dc4-9c60-4382-9a4d-9ff7b112e128]
+2026-02-13 02:17:09.301 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:10.086 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-aea49f58-5356-4fb7-b304-3a0d5022d327]
+2026-02-13 02:17:10.087 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:13.127 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ca4c4c1b-3182-4b1a-9a17-4fd50a619707]
+2026-02-13 02:17:13.129 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:14.527 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6f5a435f-4372-4269-bf6c-e7f4c0c4ab86]
+2026-02-13 02:17:14.528 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:17:38.676 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-75c99d8d-61b4-45d3-b9c1-50fca2a0bfc7]
+2026-02-13 02:17:39.782 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-8e2ea002-f1ea-4aee-ab38-d152a52c9613]
+2026-02-13 02:17:41.130 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-42e602a4-410c-4f01-bbbb-2ef19da321d6]
+2026-02-13 02:17:42.641 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b99027a0-6283-48e6-8663-37d097f01f5d]
+2026-02-13 02:17:45.862 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-c6467f9c-101c-4314-a8d0-2cb97ccd3eae]
+2026-02-13 02:17:47.410 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-bd871dc3-6dbc-4448-a54f-d7dc9727e40e]
+2026-02-13 02:17:48.796 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-bbccf101-c2f8-438b-9b98-d13c13642086]
+2026-02-13 02:17:49.937 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-3e1e912e-f32e-43d7-894e-a75e1749b29f]
+2026-02-13 02:17:51.217 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-53cd6942-0839-4d4d-89a8-8e87ed3accf3]
+2026-02-13 02:17:53.257 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2040ms [cid=API-GATEWAY-53cd6942-0839-4d4d-89a8-8e87ed3accf3]
+2026-02-13 02:18:40.349 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-75fcc2ee-cc06-4f8e-b4ab-1d8ad9d63a4b]
+2026-02-13 02:18:44.392 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b9052132-82ef-40bd-a8e7-b1daf8538a99]
+2026-02-13 02:18:47.401 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-1620f4e7-b84e-4a18-9a41-dfb8d4c28c5d]
+2026-02-13 02:18:49.429 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2028ms [cid=API-GATEWAY-1620f4e7-b84e-4a18-9a41-dfb8d4c28c5d]
+2026-02-13 02:18:51.331 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-bbdbf81c-827a-468d-a98c-1f4624f97a4a]
+2026-02-13 02:18:53.080 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-19512a28-ef8d-4af7-b706-c4a2130d93e3]
+2026-02-13 02:18:53.924 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b2e14744-a71d-49a3-8c25-72c79df95008]
+2026-02-13 02:18:54.889 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d948e9f3-ebe6-4ce2-babb-ed0a9f7c0f0e]
+2026-02-13 02:18:55.634 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-7d2beac4-a9c6-463b-9cd2-e9ef775cb465]
+2026-02-13 02:18:57.684 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2050ms [cid=API-GATEWAY-7d2beac4-a9c6-463b-9cd2-e9ef775cb465]
+2026-02-13 02:20:21.667 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:21:18.876 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e93f2d2b-edef-47dd-842a-17c593d85d11]
+2026-02-13 02:21:20.913 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2037ms [cid=API-GATEWAY-e93f2d2b-edef-47dd-842a-17c593d85d11]
+2026-02-13 02:21:23.669 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f87868b2-6520-4b78-9c62-dc6614be0959]
+2026-02-13 02:21:24.620 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-7c750550-48f9-41f2-946e-98a6cc369bad]
+2026-02-13 02:21:25.369 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-20f1ec6e-0c6b-42c5-82d0-78078824c0cf]
+2026-02-13 02:21:26.088 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-2d2c7dfc-69eb-4380-a31c-7494ee863c3a]
+2026-02-13 02:21:26.790 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-bcfe5584-4cc2-457a-a626-715c035205dd]
+2026-02-13 02:21:27.765 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6eb4dd7a-34b1-4a94-96c2-558b75ead02f]
+2026-02-13 02:21:29.784 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2019ms [cid=API-GATEWAY-6eb4dd7a-34b1-4a94-96c2-558b75ead02f]
+2026-02-13 02:21:32.881 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b161c0dd-c2be-451d-afc6-a772a62812d0]
+2026-02-13 02:21:34.914 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2033ms [cid=API-GATEWAY-b161c0dd-c2be-451d-afc6-a772a62812d0]
+2026-02-13 02:21:58.045 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ba444a05-1bcb-4fc8-9829-776ac2a7f753]
+2026-02-13 02:22:00.853 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-a2f59c05-2e66-49db-bf93-01d78c5d44cf]
+2026-02-13 02:25:21.679 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:29:43.291 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-a64e9927-9343-45a1-a3ca-ca81e08aeb4a]
+2026-02-13 02:29:45.649 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2358ms [cid=API-GATEWAY-a64e9927-9343-45a1-a3ca-ca81e08aeb4a]
+2026-02-13 02:29:48.180 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-a11c3dea-e7bf-43e1-a37b-824c7f7247a8]
+2026-02-13 02:29:50.211 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2031ms [cid=API-GATEWAY-a11c3dea-e7bf-43e1-a37b-824c7f7247a8]
+2026-02-13 02:29:54.862 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-114324c7-52e1-4d42-896e-a270dcd2e316]
+2026-02-13 02:29:58.190 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d2afaa05-2bb6-49b4-964f-c6d737ead015]
+2026-02-13 02:30:01.297 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-452a596f-8def-491e-be33-34d97da27675]
+2026-02-13 02:30:02.901 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-385246e4-11af-472d-95a6-52edcbbe77b7]
+2026-02-13 02:30:06.306 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d0cd6b09-b9b2-46d9-ab8f-e379087e8328]
+2026-02-13 02:30:06.337 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=31ms [cid=API-GATEWAY-d0cd6b09-b9b2-46d9-ab8f-e379087e8328]
+2026-02-13 02:30:07.619 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-9ff9eccd-b17c-4f95-8e95-c577574d22b4]
+2026-02-13 02:30:07.645 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=26ms [cid=API-GATEWAY-9ff9eccd-b17c-4f95-8e95-c577574d22b4]
+2026-02-13 02:30:08.443 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-63ef4ec0-7498-4441-a889-1e87d19c5cfe]
+2026-02-13 02:30:08.467 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=24ms [cid=API-GATEWAY-63ef4ec0-7498-4441-a889-1e87d19c5cfe]
+2026-02-13 02:30:08.970 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-cd043384-68e5-40b8-88ac-971f1181b776]
+2026-02-13 02:30:08.998 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=28ms [cid=API-GATEWAY-cd043384-68e5-40b8-88ac-971f1181b776]
+2026-02-13 02:30:09.265 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-04fa5efe-75dc-4ced-95c6-5c17e0893443]
+2026-02-13 02:30:09.291 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=26ms [cid=API-GATEWAY-04fa5efe-75dc-4ced-95c6-5c17e0893443]
+2026-02-13 02:30:09.525 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-dc8afcb0-4877-46c9-971f-903c1741d7f0]
+2026-02-13 02:30:09.560 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=35ms [cid=API-GATEWAY-dc8afcb0-4877-46c9-971f-903c1741d7f0]
+2026-02-13 02:30:09.749 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b1abadc7-82a6-4bdf-a23c-3dd11ffc34b3]
+2026-02-13 02:30:09.794 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=45ms [cid=API-GATEWAY-b1abadc7-82a6-4bdf-a23c-3dd11ffc34b3]
+2026-02-13 02:30:09.944 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-201a8384-5b64-4d53-b2a4-36c49b7b9ba0]
+2026-02-13 02:30:09.971 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=27ms [cid=API-GATEWAY-201a8384-5b64-4d53-b2a4-36c49b7b9ba0]
+2026-02-13 02:30:10.119 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-48ef19d7-2f52-4905-9862-f51c513da8c1]
+2026-02-13 02:30:10.188 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=69ms [cid=API-GATEWAY-48ef19d7-2f52-4905-9862-f51c513da8c1]
+2026-02-13 02:30:10.470 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-af71d734-7b79-4380-a1b0-febc365d5a7d]
+2026-02-13 02:30:10.502 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=32ms [cid=API-GATEWAY-af71d734-7b79-4380-a1b0-febc365d5a7d]
+2026-02-13 02:30:10.843 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6d127840-f150-44aa-ac73-c3ea71c30a62]
+2026-02-13 02:30:10.870 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=27ms [cid=API-GATEWAY-6d127840-f150-44aa-ac73-c3ea71c30a62]
+2026-02-13 02:30:11.711 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-38f8178a-a26f-400f-ba97-37d659f4302c]
+2026-02-13 02:30:11.742 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=31ms [cid=API-GATEWAY-38f8178a-a26f-400f-ba97-37d659f4302c]
+2026-02-13 02:30:11.957 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-2d1d679c-365f-4b93-b258-79b14405bf2b]
+2026-02-13 02:30:11.992 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=34ms [cid=API-GATEWAY-2d1d679c-365f-4b93-b258-79b14405bf2b]
+2026-02-13 02:30:12.212 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-9ba0828e-af3a-42ac-ab15-dd575a67743f]
+2026-02-13 02:30:12.241 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=29ms [cid=API-GATEWAY-9ba0828e-af3a-42ac-ab15-dd575a67743f]
+2026-02-13 02:30:12.639 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f2405816-6c49-409a-b97b-dd60c2363210]
+2026-02-13 02:30:12.663 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=24ms [cid=API-GATEWAY-f2405816-6c49-409a-b97b-dd60c2363210]
+2026-02-13 02:30:13.581 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-73ee3282-a24b-4493-ab1b-1f795a7b0d2c]
+2026-02-13 02:30:14.701 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-7aceb00f-9305-4b6e-80db-101f4dbb313f]
+2026-02-13 02:30:16.730 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2029ms [cid=API-GATEWAY-7aceb00f-9305-4b6e-80db-101f4dbb313f]
+2026-02-13 02:30:21.692 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:30:29.267 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d1823cab-62b7-41e6-ba8c-6460384481e9]
+2026-02-13 02:30:31.297 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2030ms [cid=API-GATEWAY-d1823cab-62b7-41e6-ba8c-6460384481e9]
+2026-02-13 02:30:51.985 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f5b36b72-78a7-4537-b28e-163ad45e1b7f]
+2026-02-13 02:30:54.033 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2048ms [cid=API-GATEWAY-f5b36b72-78a7-4537-b28e-163ad45e1b7f]
+2026-02-13 02:30:56.845 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-256bb685-b659-4afb-8d61-e78d0866e36b]
+2026-02-13 02:30:56.868 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=23ms [cid=API-GATEWAY-256bb685-b659-4afb-8d61-e78d0866e36b]
+2026-02-13 02:30:59.952 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-c0ec09f9-5a94-46a9-add5-52ddf966ec61]
+2026-02-13 02:30:59.975 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=22ms [cid=API-GATEWAY-c0ec09f9-5a94-46a9-add5-52ddf966ec61]
+2026-02-13 02:31:00.912 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e373ba52-6627-4982-83d4-98879b3de39f]
+2026-02-13 02:31:00.938 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=26ms [cid=API-GATEWAY-e373ba52-6627-4982-83d4-98879b3de39f]
+2026-02-13 02:31:01.673 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-c8d778f8-e46f-4633-9629-39fdb3a42539]
+2026-02-13 02:31:01.696 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=23ms [cid=API-GATEWAY-c8d778f8-e46f-4633-9629-39fdb3a42539]
+2026-02-13 02:35:21.703 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:37:36.751 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-12577538-fa63-4b11-a6c6-f9ce4197e481]
+2026-02-13 02:37:36.752 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:39.268 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e9ce7ab6-268b-4ea3-a0ee-0463763e6db6]
+2026-02-13 02:37:39.269 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:42.207 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-877cce3b-d6dc-46b8-b11a-96474f1a491d]
+2026-02-13 02:37:42.208 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:45.183 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-8aa22b46-c02e-4ea8-bac7-e4b73875c1da]
+2026-02-13 02:37:45.184 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:46.045 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-b220c85a-8323-4bcc-a20d-1e86d580d2f8]
+2026-02-13 02:37:46.047 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:46.619 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d881882c-1bd4-46cf-b8cf-b696b5d1a047]
+2026-02-13 02:37:46.620 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:47.007 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-637eb8ff-191b-4274-8bbe-ca5dd259cdb7]
+2026-02-13 02:37:47.008 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:47.357 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-601905a6-9580-46b8-a491-aeec2959713c]
+2026-02-13 02:37:47.359 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:47.720 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ffd17be9-5a94-4833-ad01-05f6694c77a6]
+2026-02-13 02:37:47.722 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:48.151 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-508c8f9c-8825-4596-a56a-de53b817553f]
+2026-02-13 02:37:48.152 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:48.668 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6dc149f8-7dc2-4941-aff6-9ed318212e07]
+2026-02-13 02:37:48.669 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:49.224 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d74cfbdd-73b9-4a60-9ca0-f8d2c352ff94]
+2026-02-13 02:37:49.225 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:49.729 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6726d9b3-c0ab-4c3d-a86b-1e7c110d2808]
+2026-02-13 02:37:49.730 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:50.220 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-5158c704-542e-4ad5-9586-dde9513a7333]
+2026-02-13 02:37:50.222 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:50.627 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-0e0f2105-a148-47f5-aaad-777a2d0762f4]
+2026-02-13 02:37:50.628 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:51.059 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-db9c125d-d3dd-4e32-869b-650bdaa16446]
+2026-02-13 02:37:51.061 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:51.304 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-13753d41-5958-428c-a7af-b60e30ab2cdf]
+2026-02-13 02:37:51.308 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:51.515 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-c154c81d-34f0-4018-bff1-22f64fc661c8]
+2026-02-13 02:37:51.517 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:51.750 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ceef49bf-9ae8-4ec1-a8ff-6d94bf0c2721]
+2026-02-13 02:37:51.751 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:51.979 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-1fb3988f-9a7b-4f79-9fa9-4a1f531665d0]
+2026-02-13 02:37:51.980 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:53.182 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-9a3aaa69-34be-4b57-90d8-40b873ec558c]
+2026-02-13 02:37:53.184 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:55.891 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-4b50ad79-3410-4630-af4b-9f1490a20667]
+2026-02-13 02:37:55.894 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:56.631 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-066bce9d-f8a0-45e9-b075-68bcebf29f6f]
+2026-02-13 02:37:56.633 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:57.049 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-66905076-242e-4e12-949a-e77bf0c6e3f0]
+2026-02-13 02:37:57.050 [reactor-http-nio-1] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 02:37:57.676 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-34c1c2e4-f0d4-4c10-b592-dda620ef9c71]
+2026-02-13 02:38:00.108 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2432ms [cid=API-GATEWAY-34c1c2e4-f0d4-4c10-b592-dda620ef9c71]
+2026-02-13 02:38:07.980 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-678deb69-7071-457d-8837-a4c1f45da128]
+2026-02-13 02:38:10.508 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-5e2b26b8-dab7-412b-9ef7-f654ed4244ba]
+2026-02-13 02:38:11.598 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-95065c44-8a96-47de-b5b7-733390843a20]
+2026-02-13 02:38:30.607 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-2f02c3b1-3fa3-4308-9d40-b47a95fec48c]
+2026-02-13 02:38:32.801 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-40b4b6ad-d9fd-4ea1-88ac-0b924ed43c66]
+2026-02-13 02:38:32.843 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=42ms [cid=API-GATEWAY-40b4b6ad-d9fd-4ea1-88ac-0b924ed43c66]
+2026-02-13 02:38:34.042 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-3c5d0947-416f-471b-addf-2b7e900cbf6b]
+2026-02-13 02:38:34.070 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=28ms [cid=API-GATEWAY-3c5d0947-416f-471b-addf-2b7e900cbf6b]
+2026-02-13 02:39:50.672 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-902ae13b-8010-4503-9503-640588925553]
+2026-02-13 02:39:51.705 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-3f5cd3ed-ea4f-4b3b-83a6-d8848d315c9f]
+2026-02-13 02:39:53.787 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2082ms [cid=API-GATEWAY-3f5cd3ed-ea4f-4b3b-83a6-d8848d315c9f]
+2026-02-13 02:40:21.711 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:45:21.724 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:50:21.730 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 02:55:21.739 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 03:00:21.741 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 03:05:21.749 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 03:10:21.753 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 03:15:21.763 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 03:20:21.768 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 03:24:02.147 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application API-GATEWAY with eureka with status DOWN
+2026-02-13 03:24:02.148 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1770933242148, current=DOWN, previous=UP]
+2026-02-13 03:24:02.149 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080: registering service...
+2026-02-13 03:24:02.175 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - registration status: 204
+2026-02-13 03:24:04.386 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-02-13 03:24:07.401 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-02-13 03:24:07.426 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2026-02-13 03:24:07.426 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: Connection pool shut down
+2026-02-13 03:24:07.430 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2026-02-13 03:24:07.430 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: Connection pool shut down
+2026-02-13 03:24:07.431 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-02-13 03:24:07.449 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-02-13 14:09:36.299 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-13 14:09:36.573 [main] INFO  c.e.apigateway.ApiGatewayApplication - Starting ApiGatewayApplication using Java 17.0.17 with PID 252 (C:\Users\prafu\IdeaProjects\api-gateway\target\classes started by prafu in C:\Users\prafu\IdeaProjects\api-gateway)
+2026-02-13 14:09:36.576 [main] INFO  c.e.apigateway.ApiGatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 14:09:36.780 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-02-13 14:09:36.781 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=api-gateway, profiles=[default], label=null, version=604d5799809384b048144e7f10ac706d904a96b4, state=
+2026-02-13 14:09:42.788 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=db89eeed-a15e-3f9a-913a-05d057b07ac5
+2026-02-13 14:09:44.025 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-02-13 14:09:44.029 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-02-13 14:09:44.033 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-02-13 14:09:44.046 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-02-13 14:09:44.129 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-02-13 14:09:50.931 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2026-02-13 14:09:50.932 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2026-02-13 14:09:50.932 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2026-02-13 14:09:50.932 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2026-02-13 14:09:50.933 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2026-02-13 14:09:50.933 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2026-02-13 14:09:50.933 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2026-02-13 14:09:50.933 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2026-02-13 14:09:50.933 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2026-02-13 14:09:50.934 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2026-02-13 14:09:50.939 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2026-02-13 14:09:50.941 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-02-13 14:09:50.946 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2026-02-13 14:09:50.946 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-02-13 14:09:53.408 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2026-02-13 14:09:55.378 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-02-13 14:09:55.502 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-13 14:09:56.033 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-02-13 14:09:56.437 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-02-13 14:09:56.466 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:09:56.547 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-02-13 14:09:56.549 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-02-13 14:09:56.549 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-02-13 14:09:56.549 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-02-13 14:09:56.549 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-02-13 14:09:56.549 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-02-13 14:09:56.550 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-02-13 14:09:57.724 [main] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1045)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:396)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:247)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:242)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:365)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:362)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.apigateway.ApiGatewayApplication.main(ApiGatewayApplication.java:10)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 67 more
+
+2026-02-13 14:09:57.726 [main] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-02-13 14:09:57.727 [main] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1045)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:396)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:247)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:242)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:365)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:362)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.apigateway.ApiGatewayApplication.main(ApiGatewayApplication.java:10)
+
+2026-02-13 14:09:57.729 [main] INFO  c.netflix.discovery.DiscoveryClient - Initial registry fetch from primary servers failed
+2026-02-13 14:09:57.729 [main] WARN  c.netflix.discovery.DiscoveryClient - Using default backup registry implementation which does not do anything.
+2026-02-13 14:09:57.730 [main] INFO  c.netflix.discovery.DiscoveryClient - Initial registry fetch from backup servers failed
+2026-02-13 14:09:57.734 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-02-13 14:09:57.742 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-02-13 14:09:57.754 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1770971997753 with initial instances count: 0
+2026-02-13 14:09:57.759 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application API-GATEWAY with eureka with status UP
+2026-02-13 14:09:57.762 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1770971997762, current=UP, previous=STARTING]
+2026-02-13 14:09:57.766 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080: registering service...
+2026-02-13 14:09:57.910 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2026-02-13 14:09:57.911 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-02-13 14:09:57.911 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-02-13 14:09:57.915 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-02-13 14:09:58.655 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2026-02-13 14:09:58.660 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2026-02-13 14:09:59.781 [main] INFO  c.e.apigateway.ApiGatewayApplication - Started ApiGatewayApplication in 28.265 seconds (process running for 30.774)
+2026-02-13 14:10:27.746 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-02-13 14:10:27.747 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-02-13 14:10:27.748 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-02-13 14:10:27.748 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-02-13 14:10:27.749 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-02-13 14:10:27.749 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-02-13 14:10:27.750 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-02-13 14:10:27.837 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - Re-registering apps/API-GATEWAY
+2026-02-13 14:10:27.837 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-02-13 14:10:27.837 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080: registering service...
+2026-02-13 14:10:27.849 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/host.docker.internal:api-gateway:8080 - registration status: 204
+2026-02-13 14:10:57.856 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-02-13 14:10:57.856 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-02-13 14:10:57.857 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-02-13 14:10:57.857 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-02-13 14:10:57.857 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-02-13 14:10:57.857 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-02-13 14:10:57.857 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-02-13 14:10:57.880 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-02-13 14:14:56.613 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:19:56.539 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:24:56.464 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:29:56.395 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:34:56.354 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:38:50.956 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-418a8e4a-6bf9-498c-8b2d-dc7daf1a5947]
+2026-02-13 14:38:51.239 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:05.147 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-356b1790-0502-450a-bf3d-cfca9954b2ba]
+2026-02-13 14:39:05.151 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:05.896 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-cbfd9156-f64e-4599-ac67-1bf54ad52263]
+2026-02-13 14:39:05.899 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:06.172 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f56dd009-2dc7-4931-b08f-877fe6a3e43f]
+2026-02-13 14:39:06.174 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:07.227 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-31eaee16-a63c-4c33-8c28-69c9ca319d6f]
+2026-02-13 14:39:07.230 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:07.464 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-718786b2-9064-4c97-80f8-e91336d9c000]
+2026-02-13 14:39:07.466 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:07.673 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ebcc4aa0-fb60-4bab-bbdb-c3565ec02675]
+2026-02-13 14:39:07.674 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:09.026 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e38cc04e-fab5-4135-80a5-72eb6121c33d]
+2026-02-13 14:39:09.028 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:18.825 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-d5805f6e-479d-4db7-bc84-74d0590dad34]
+2026-02-13 14:39:18.828 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:19.045 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-5356fead-3807-4b15-91cb-aa6a182f3019]
+2026-02-13 14:39:19.047 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:19.265 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-4980ded6-3892-416b-a533-6dadcf9937b0]
+2026-02-13 14:39:19.268 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:19.500 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e1309485-f425-4951-9ad8-e5032de77d5d]
+2026-02-13 14:39:19.502 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:19.861 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-91809355-8ab6-4211-a4ea-d4fa5b9348d2]
+2026-02-13 14:39:19.863 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:20.045 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-3291612d-6e2b-46a2-b1cd-6b0cf190e7eb]
+2026-02-13 14:39:20.046 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:20.248 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-35c77584-5e1c-4947-a1ca-98c1964a75ac]
+2026-02-13 14:39:20.249 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:20.427 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-654575d4-3704-44ab-8c65-52382ac057d0]
+2026-02-13 14:39:20.428 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:20.615 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-bb0fa367-910e-4cd2-8ed3-3cdc4324058e]
+2026-02-13 14:39:20.616 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:20.805 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-558cd14f-88d4-47fa-bfbe-da6f048affde]
+2026-02-13 14:39:20.807 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:20.980 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f3faf606-eb7b-4adc-a6dd-fdeafa45d44b]
+2026-02-13 14:39:20.981 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:21.147 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-afbdbd86-3cc8-476d-b0ef-f75fd230d140]
+2026-02-13 14:39:21.148 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:21.353 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-5fae77cc-31e6-4bc6-92e1-3d6910d38700]
+2026-02-13 14:39:21.355 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:21.545 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-33d1b017-e2eb-4c85-8eb7-bbf43166081f]
+2026-02-13 14:39:21.547 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:21.755 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-fb49e7bc-bebb-4625-b614-9781726f3fed]
+2026-02-13 14:39:21.757 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:21.941 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-be26fc51-ebc8-41cb-a262-1c904e858d95]
+2026-02-13 14:39:21.943 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:22.167 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-49ab6713-7875-4b5f-ad3e-c49aa50f643a]
+2026-02-13 14:39:22.168 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:22.442 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-77492423-e632-481e-a74a-763f1e85996b]
+2026-02-13 14:39:22.444 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:22.682 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e29e3d6c-384b-42aa-9c2e-31db4cb16213]
+2026-02-13 14:39:22.684 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:22.947 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-1a57fcdd-0d03-487e-8331-b34f048c0eac]
+2026-02-13 14:39:22.949 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:23.183 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-75725b78-bf64-4949-9704-01c300b22b9e]
+2026-02-13 14:39:23.184 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:23.411 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-813b5f0b-7dfd-4d50-9540-2ce67f61db25]
+2026-02-13 14:39:23.412 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:23.607 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-454df591-4f15-4de6-b163-64da1146f052]
+2026-02-13 14:39:23.608 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:23.833 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-ffcb0041-c8e2-4c55-bfda-ce72f9d594e0]
+2026-02-13 14:39:23.834 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:23.996 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f0dcb730-e12c-471a-a9dd-49792ac52cf0]
+2026-02-13 14:39:23.997 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:24.185 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-21a99f5e-66a1-4a9a-a8dd-e4c88054a168]
+2026-02-13 14:39:24.186 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:24.359 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-89e5eae4-00ff-4143-86c8-4449b9d58e02]
+2026-02-13 14:39:24.360 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:24.535 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-64d80b29-f8eb-49d9-814d-8f5f70244f11]
+2026-02-13 14:39:24.536 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:24.719 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6b646391-ce3a-4e10-9d37-29372d9e1253]
+2026-02-13 14:39:24.721 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:24.889 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-587d8be8-4e28-4c10-8f8f-04e4bba2bf41]
+2026-02-13 14:39:24.891 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:25.107 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-799634e3-d414-4c93-9d4e-e07e3157bd15]
+2026-02-13 14:39:25.109 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:25.267 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-362e97bb-ebcc-4990-a197-50e5f79d063e]
+2026-02-13 14:39:25.269 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:25.485 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-e12ff994-4b5b-4514-a09c-5087c1fc1257]
+2026-02-13 14:39:25.487 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:25.836 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f9d2f5f4-6e47-4a1c-b421-f9c89d71c42b]
+2026-02-13 14:39:25.837 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:26.030 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-000b93bf-61e6-4f32-ab4d-0645ac043667]
+2026-02-13 14:39:26.031 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:26.207 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-bff8799d-b8f0-4808-9aad-02108e811785]
+2026-02-13 14:39:26.208 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:26.420 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-012bf552-9738-415d-a5b9-e4821f212767]
+2026-02-13 14:39:26.425 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:26.586 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f4bd60d9-b982-440b-b075-e1f1556a01ee]
+2026-02-13 14:39:26.591 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:26.746 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-8d494a46-08c4-4454-b41a-40e1bf2fdc6e]
+2026-02-13 14:39:26.748 [reactor-http-nio-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer - No servers available for service: EMPLOYEE-SERVICE
+2026-02-13 14:39:31.083 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-3afd8b3b-422a-4dbd-992d-fd8dc8bacfcc]
+2026-02-13 14:39:33.976 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2893ms [cid=API-GATEWAY-3afd8b3b-422a-4dbd-992d-fd8dc8bacfcc]
+2026-02-13 14:39:56.321 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:39:59.531 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-5bf83074-cc16-4f47-b9d5-de33cdfcba03]
+2026-02-13 14:40:00.933 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-050c0bdd-5111-4b3f-91e1-95a851a20cfb]
+2026-02-13 14:40:02.995 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2062ms [cid=API-GATEWAY-050c0bdd-5111-4b3f-91e1-95a851a20cfb]
+2026-02-13 14:41:59.192 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-cadd9885-7cb2-4d71-872c-1ffa280f5126]
+2026-02-13 14:41:59.858 [reactor-http-nio-3] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-339c8093-360d-4dce-837c-eaee82645d6f]
+2026-02-13 14:42:00.552 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-14ed5384-de0d-4600-b2ba-3dad72cc4c42]
+2026-02-13 14:42:02.629 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2077ms [cid=API-GATEWAY-14ed5384-de0d-4600-b2ba-3dad72cc4c42]
+2026-02-13 14:42:19.145 [reactor-http-nio-4] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-5329ed3e-ab91-48e2-84d1-a25698257228]
+2026-02-13 14:42:24.729 [reactor-http-nio-1] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-6eebf803-eef1-4edc-91a9-8b053aebac28]
+2026-02-13 14:42:25.712 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-20f24b6a-93bc-4c1a-8c30-6d8c2d6e34a8]
+2026-02-13 14:42:25.756 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=44ms [cid=API-GATEWAY-20f24b6a-93bc-4c1a-8c30-6d8c2d6e34a8]
+2026-02-13 14:42:25.907 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-657d9545-75f5-4ace-b7b3-17e4ee016259]
+2026-02-13 14:42:25.959 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=52ms [cid=API-GATEWAY-657d9545-75f5-4ace-b7b3-17e4ee016259]
+2026-02-13 14:44:00.564 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-cc709e5e-6ab1-47b2-a047-cfd3db4a3f38]
+2026-02-13 14:44:02.614 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [RES] status=200 time=2050ms [cid=API-GATEWAY-cc709e5e-6ab1-47b2-a047-cfd3db4a3f38]
+2026-02-13 14:44:33.696 [reactor-http-nio-2] INFO  c.e.a.f.CorrelationIdGlobalFilter - [REQ] GET /employees/1 [cid=API-GATEWAY-f636472c-f435-4e52-834f-d7074b4f9dcd]
+2026-02-13 14:44:56.267 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-02-13 14:49:56.222 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

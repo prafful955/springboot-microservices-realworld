@@ -10,7 +10,7 @@
         <encoder>
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
-    </appender>
+    </appender>t
 
     <!-- File Appender -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">

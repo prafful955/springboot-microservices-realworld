@@ -13,11 +13,12 @@ import java.util.Map;
 public class DepartmentController {
 
     @GetMapping("/{id}")
-    public Map<String, Object> getDepartment(@PathVariable Long id) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("id", id);
-        map.put("name", "IT");
-        return map;
+    public Map<String, Object> getDepartment(@PathVariable Long id)
+            throws InterruptedException {
+
+        Thread.sleep(5000); // delay
+        return Map.of("id", id, "name", "IT");
     }
+
 }
 
