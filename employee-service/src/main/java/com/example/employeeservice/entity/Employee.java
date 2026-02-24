@@ -19,4 +19,7 @@ public class Employee {
 
     @Column(unique = true)
     private String email;
+
+    private Long departmentId;
+
 }
